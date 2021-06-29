@@ -1,3 +1,10 @@
+<!-- Words the API can choose from 
+      Access the data to create word that needs to be solved; initially written as  _ _ _ _ _ etc., -->
+
+
+
+
+
 # (Blank Template)
 
 #### (Brief Description of Application)
