@@ -1,17 +1,25 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-// import DinoHangman from './hangman.js';
 import DinoHangman from './services/hangman.js';
 import $ from 'jquery';
 
 
-DinoHangman
-let request = new XMLHttpRequest();
-const url = `http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=5`
+// DinoHangman
 
-request.onreadystatechagne = function() {
-  if (this.status === 200) {
+$(document).ready(function() {
+  $('#submit').click(function() {
+    let paragraphNumber = $('#paragraph').val();
+    console.log(paragraphNumber);
+    let wordNumber = $('#word').val();
+    console.log(wordNumber);
+    let x = DinoHangman.dinoIpsum(paragraphNumber, wordNumber)
+    .then(function(response){
+    
+    console.log(response)
+    $('.story').text(response);
+    })
 
-  }
-}
+    console.log(x);
+  });
+});

@@ -2,7 +2,7 @@
 // console.log(url)
 export default class DinoHangman {
   static dinoIpsum(paragraph, word) {
-    return fetch(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=5`)
+    return fetch(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=${paragraph}&words=${word}`)
       .then(function(response) {
         if (!response.ok) {
           throw Error(response.statusText);
@@ -11,6 +11,6 @@ export default class DinoHangman {
     })
       .catch(function(error) {
         return Error(error);
-    })
+    });
   }
 }
