@@ -1,2 +1,16 @@
-const url = `http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=5`
-console.log(url)
+// const url = ``
+// console.log(url)
+export default class DinoHangman {
+  static dinoIpsum(paragraph, word) {
+    return fetch(`http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=1&words=5`)
+      .then(function(response) {
+        if (!response.ok) {
+          throw Error(response.statusText);
+      }
+        return response.json();
+    })
+      .catch(function(error) {
+        return Error(error);
+    })
+  }
+}

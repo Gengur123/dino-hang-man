@@ -5,10 +5,14 @@
 </head>
 <body>
   <div class="container">
-    <h1>Lets play Dino Hangman</h1>
-    <label for="letter">Enter a letter guess!</label>
-    <input type="text" name="guess" id="letter">
-    <button class="btn-success" id="userGuess">Guess!</button>
+    <h1>Generate a dinosaur story!</h1>
+    <label for="paragraph">Enter how many paragraphs you would like!(Up to 30):</label>
+    <input type="number" name="paragraphInput" id="paragraph" min="1" max="30">
+    <label for="words">Enter how many words you would like each paragraph to have!(Up to 50):</label>
+    <input type="number" name="wordInput" id="words" min="1" max="50">
+    <button class="btn-success" id="userGuess">Submit</button>
   </div>
 </body>
 </html>
+
+<!-- http://dinoipsum.herokuapp.com/api/?format=json&paragraphs=fifteen&words=ten -->
